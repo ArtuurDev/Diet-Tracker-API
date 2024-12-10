@@ -1,0 +1,25 @@
+{
+  "name": "diet-tracker-api",
+  "version": "1.0.0",
+  "description": "O **Diet Tracker API** é um sistema projetado para o gerenciamento de usuários e suas refeições. Ele permite que os usuários monitorem sua alimentação e acompanhem metas relacionadas à dieta. A API será desenvolvida utilizando **Fastify**, **Knex**, **Zod** e **cookies** para identificação de usuários.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx tsx src/server.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^22.10.1",
+    "cookies": "^0.9.1",
+    "dotenv": "^16.4.7",
+    "fastify": "^5.1.0",
+    "knex": "^3.1.0",
+    "sqlite3": "^5.1.7",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "zod": "^3.24.0"
+  }
+}
