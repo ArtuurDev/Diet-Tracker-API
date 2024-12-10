@@ -1,7 +1,7 @@
-﻿# Diet Tracker API
+# Diet Tracker API
 
 ## Descrição
-O **Diet Tracker API** é um sistema projetado para o gerenciamento de usuários e suas refeições. Ele permite que os usuários monitorem sua alimentação e acompanhem metas relacionadas à dieta. A API será desenvolvida utilizando **Fastify**, **Knex**, **Zod** e **cookies** para identificação de usuários.
+O **Diet Tracker API** é um sistema projetado para o gerenciamento de usuários e suas refeições. Ele permite que os usuários monitorem sua alimentação e acompanhem metas relacionadas à dieta. A API será desenvolvida utilizando **Fastify**, **Knex**, **Zod**, **SQLite3** e **cookies** para identificação de usuários.
 
 ## Funcionalidades
 
@@ -34,8 +34,8 @@ O **Diet Tracker API** é um sistema projetado para o gerenciamento de usuários
 - **Fastify:** Framework web rápido e eficiente para construir APIs.
 - **Knex:** Query builder para interação com o banco de dados.
 - **Zod:** Biblioteca para validação e definição de esquemas.
+- **SQLite3:** Banco de dados leve e eficiente para armazenamento local.
 - **Cookies:** Utilizados para autenticar e identificar o usuário em cada requisição.
-- Recupera as métricas do usuário.
+- **TypeScript:** Linguagem para adicionar tipagem estática ao JavaScript, garantindo maior segurança e clareza no código.
 
-Feito com ❤ por Luiz Artur
 
