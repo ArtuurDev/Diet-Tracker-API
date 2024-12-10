@@ -37,5 +37,5 @@ O **Diet Tracker API** é um sistema projetado para o gerenciamento de usuários
 - **Cookies:** Utilizados para autenticar e identificar o usuário em cada requisição.
 - Recupera as métricas do usuário.
 
-Feito com ❤ por [LUIZ ARTUR]
+Feito com ❤ por Luiz Artur
 
