@@ -1,12 +1,18 @@
 import fastify from "fastify";
 const app = fastify()
 import {knex} from '../database/database'
+import {z} from 'zod'
+import { users } from "./routes/users-routes";
+import fastifyCookie from "@fastify/cookie";
+import { refeicao } from "./routes/refeicao-routes";
+import { metricas } from "./routes/metricas-routes";
 
-app.get('/', () => {
 
-    const test = knex('sqlite_schema').select("*")
-    return test
-})
+app.register(fastifyCookie)
+app.register(users)
+app.register(refeicao)
+app.register(metricas)
+
 
 app.listen({
     port: 3000
