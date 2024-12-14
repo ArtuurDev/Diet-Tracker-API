@@ -1,7 +1,5 @@
 import fastify from "fastify";
 const app = fastify()
-import {knex} from '../database/database'
-import {z} from 'zod'
 import { users } from "./routes/users-routes";
 import fastifyCookie from "@fastify/cookie";
 import { refeicao } from "./routes/refeicao-routes";

@@ -66,6 +66,46 @@ export function refeicao(app: FastifyInstance) {
     })
 
     
+    app.get('/refeicao/:id', async (request, reply) => {
+    
+        const session_id = request.cookies.session_id
+
+        if (!session_id) {
+            return reply.code(400).send({message: 'unauthorized'})
+        }
+
+        const zodId = z.object({
+            id: z.string()
+        })
+    
+        const validationId = zodId.safeParse(request.params)
+    
+        if(!validationId.success) {
+            console.log(validationId.error)
+            throw new Error(JSON.stringify(validationId.error.format()))
+        }
+        const {id} = validationId.data
+    
+        const zod = z.object({
+            nome: z.string(),
+            descricao: z.string(),
+            dentroDaDieta: z.boolean()
+        })
+
+        try {
+            const refeicao = await knex('Refeicao').where({
+                id: id,
+                session_id: session_id
+            })
+    
+            return reply.code(201).send({refeicao})
+
+        }catch (error) {
+            console.log(error)
+            return reply.code(500).send('erro interno no servidor')
+        }    
+        
+    }) 
     app.put('/refeicao/:id', async (request, reply) => {
     
         const session_id = request.cookies.session_id

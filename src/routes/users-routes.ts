@@ -4,7 +4,7 @@ import {z} from  'zod'
 import { randomUUID } from "crypto"
 export function users(app: FastifyInstance) {
     
-    app.post('/', async (request, reply) => {
+    app.post('/user', async (request, reply) => {
 
         const zod = z.object({
 
@@ -31,7 +31,7 @@ export function users(app: FastifyInstance) {
             const session_id = randomUUID()
 
             reply.cookie('session_id', session_id, {
-                path: '/',
+                path: '/user',
                 maxAge: 60 * 60 * 24 * 30 // 30 days
             })
         }        
@@ -48,7 +48,7 @@ export function users(app: FastifyInstance) {
         return reply.code(201).send()
     })
     
-    app.get('/', async(request, reply) => {
+    app.get('/user', async(request, reply) => {
     
         const users = await knex('User').select()
         return reply.send({users})
